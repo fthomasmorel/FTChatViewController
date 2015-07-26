@@ -16,7 +16,7 @@ TODO
 ### Integration
 Add the ```FTChatViewController``` in a ViewController. For example :
 
-```
+```swift
 let storyboard = UIStoryboard(name: "Main", bundle: nil)
 if let chatViewController = storyboard.instantiateViewControllerWithIdentifier("ChatViewController") as? FTChatViewController {
 	self.view.addSubview(chatViewController.view)
@@ -28,7 +28,7 @@ if let chatViewController = storyboard.instantiateViewControllerWithIdentifier("
 
 The FTMessage class look like this :
 
-```
+```swift
 class FTMessage:AnyObject{ 
     var content:String
     var date:NSDate
@@ -40,7 +40,7 @@ The ```FTMessageSource``` source field allow you to indicate whether the message
 ### Add messages to the FTChatViewController of message
 Adding messages is very simple. You juste have to use :
 
-```
+```swift
 func addMessage(message:FTMessage) -> Void
 func addMessages(messages:[FTMessage]) -> Void
 ```
