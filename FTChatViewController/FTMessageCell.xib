@@ -31,7 +31,6 @@
                         </constraints>
                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                         <connections>
                             <outlet property="delegate" destination="-1" id="VjZ-rA-2NX"/>
                         </connections>

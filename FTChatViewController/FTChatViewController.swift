@@ -49,6 +49,10 @@ class FTChatViewController: UITableViewController{
         self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
     }
     
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        self.tableView.reloadData()
+    }
+    
     
     func addMessage(message:FTMessage){
         types.append(self.typeOfMessage(message, withFormerMessage: self.messages.last))

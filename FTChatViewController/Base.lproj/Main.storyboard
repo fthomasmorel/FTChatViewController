@@ -72,24 +72,5 @@
             </objects>
             <point key="canvasLocation" x="1345" y="351"/>
         </scene>
-        <!--Chat View Controller-->
-        <scene sceneID="GAD-mG-RKs">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="iXe-QH-Ppf" customClass="FTChatViewController" customModule="FTChatViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6ae-ga-m5W"/>
-                        <viewControllerLayoutGuide type="bottom" id="APw-Nn-rPN"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="EXY-fX-kEj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7ng-v3-ZQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1167" y="-419"/>
-        </scene>
     </scenes>
 </document>
