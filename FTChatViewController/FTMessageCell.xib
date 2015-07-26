@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="208" id="CO1-hq-hHJ" customClass="FTMessageCell" customModule="FTChatViewController" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="208"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CO1-hq-hHJ" id="DE9-Ql-wdA">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="207"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Text here" translatesAutoresizingMaskIntoConstraints="NO" id="6Cw-Yk-3Sq">
+                        <rect key="frame" x="10" y="15" width="240" height="193"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="193" id="XTq-Iq-OtD"/>
+                            <constraint firstAttribute="width" constant="240" id="aVt-iU-agd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6Cw-Yk-3Sq" firstAttribute="top" secondItem="DE9-Ql-wdA" secondAttribute="top" constant="15" id="a4J-ig-Hh7"/>
+                    <constraint firstItem="6Cw-Yk-3Sq" firstAttribute="leading" secondItem="DE9-Ql-wdA" secondAttribute="leading" constant="10" id="cGx-nj-JsZ"/>
+                    <constraint firstAttribute="trailing" secondItem="6Cw-Yk-3Sq" secondAttribute="trailing" constant="70" id="cy4-4S-v4G"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="cy4-4S-v4G"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="heightConstraint" destination="XTq-Iq-OtD" id="Tda-iV-Dj8"/>
+                <outlet property="leftConstraint" destination="cGx-nj-JsZ" id="Ro7-gT-RbF"/>
+                <outlet property="messageView" destination="6Cw-Yk-3Sq" id="1ng-n2-bIj"/>
+                <outlet property="rightConstraint" destination="cy4-4S-v4G" id="03i-Oe-8Rt"/>
+                <outlet property="topConstraint" destination="a4J-ig-Hh7" id="P36-SU-DhB"/>
+                <outlet property="widthConstraint" destination="aVt-iU-agd" id="SzP-KZ-Ca8"/>
+            </connections>
+            <point key="canvasLocation" x="297" y="299"/>
+        </tableViewCell>
+    </objects>
+</document>

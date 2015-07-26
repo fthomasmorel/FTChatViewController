@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F55AB7B91B64D7740064C18C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7B81B64D7740064C18C /* AppDelegate.swift */; };
-		F55AB7BB1B64D7740064C18C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7BA1B64D7740064C18C /* ViewController.swift */; };
 		F55AB7BE1B64D7740064C18C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55AB7BC1B64D7740064C18C /* Main.storyboard */; };
 		F55AB7C01B64D7740064C18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55AB7BF1B64D7740064C18C /* Assets.xcassets */; };
 		F55AB7C31B64D7740064C18C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55AB7C11B64D7740064C18C /* LaunchScreen.storyboard */; };
 		F55AB7CE1B64D7740064C18C /* FTChatViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7CD1B64D7740064C18C /* FTChatViewControllerTests.swift */; };
 		F55AB7D91B64D7740064C18C /* FTChatViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7D81B64D7740064C18C /* FTChatViewControllerUITests.swift */; };
+		F55AB7E71B64D7950064C18C /* FTChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7E61B64D7950064C18C /* FTChatViewController.swift */; };
+		F55AB7ED1B64E4730064C18C /* FTMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7EC1B64E4730064C18C /* FTMessageCell.swift */; };
+		F55AB7EF1B64E5AE0064C18C /* FTMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F55AB7EE1B64E5AE0064C18C /* FTMessageCell.xib */; };
+		F55AB7F11B650C260064C18C /* FTHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7F01B650C260064C18C /* FTHelpers.swift */; };
+		F55AB7F31B650E030064C18C /* FTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7F21B650E030064C18C /* FTViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		F55AB7B51B64D7740064C18C /* FTChatViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTChatViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55AB7B81B64D7740064C18C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F55AB7BA1B64D7740064C18C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F55AB7BD1B64D7740064C18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F55AB7BF1B64D7740064C18C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F55AB7C21B64D7740064C18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		F55AB7D41B64D7740064C18C /* FTChatViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTChatViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55AB7D81B64D7740064C18C /* FTChatViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTChatViewControllerUITests.swift; sourceTree = "<group>"; };
 		F55AB7DA1B64D7740064C18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F55AB7E61B64D7950064C18C /* FTChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatViewController.swift; sourceTree = "<group>"; };
+		F55AB7EC1B64E4730064C18C /* FTMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMessageCell.swift; sourceTree = "<group>"; };
+		F55AB7EE1B64E5AE0064C18C /* FTMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTMessageCell.xib; sourceTree = "<group>"; };
+		F55AB7F01B650C260064C18C /* FTHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTHelpers.swift; sourceTree = "<group>"; };
+		F55AB7F21B650E030064C18C /* FTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				F55AB7B81B64D7740064C18C /* AppDelegate.swift */,
-				F55AB7BA1B64D7740064C18C /* ViewController.swift */,
 				F55AB7BC1B64D7740064C18C /* Main.storyboard */,
+				F55AB7F21B650E030064C18C /* FTViewController.swift */,
 				F55AB7BF1B64D7740064C18C /* Assets.xcassets */,
 				F55AB7C11B64D7740064C18C /* LaunchScreen.storyboard */,
 				F55AB7C41B64D7740064C18C /* Info.plist */,
+				F55AB7E61B64D7950064C18C /* FTChatViewController.swift */,
+				F55AB7EC1B64E4730064C18C /* FTMessageCell.swift */,
+				F55AB7EE1B64E5AE0064C18C /* FTMessageCell.xib */,
+				F55AB7F01B650C260064C18C /* FTHelpers.swift */,
 			);
 			path = FTChatViewController;
 			sourceTree = "<group>";
@@ -229,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F55AB7C31B64D7740064C18C /* LaunchScreen.storyboard in Resources */,
+				F55AB7EF1B64E5AE0064C18C /* FTMessageCell.xib in Resources */,
 				F55AB7C01B64D7740064C18C /* Assets.xcassets in Resources */,
 				F55AB7BE1B64D7740064C18C /* Main.storyboard in Resources */,
 			);
@@ -255,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F55AB7BB1B64D7740064C18C /* ViewController.swift in Sources */,
+				F55AB7ED1B64E4730064C18C /* FTMessageCell.swift in Sources */,
+				F55AB7E71B64D7950064C18C /* FTChatViewController.swift in Sources */,
 				F55AB7B91B64D7740064C18C /* AppDelegate.swift in Sources */,
+				F55AB7F31B650E030064C18C /* FTViewController.swift in Sources */,
+				F55AB7F11B650C260064C18C /* FTHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
