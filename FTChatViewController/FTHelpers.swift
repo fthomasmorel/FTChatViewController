@@ -54,6 +54,33 @@ extension NSDate
         let dateWithHoursAdded : NSDate = self.dateByAddingTimeInterval(secondsInHours)
         return dateWithHoursAdded
     }
+    
+    func getDay() -> Int{
+        let calender = NSCalendar.currentCalendar()
+        let component = calender.components(NSCalendarUnit.Weekday, fromDate: self)
+        return component.weekday
+    }
+}
+
+func dayForIndex(index: Int) -> String {
+    switch index {
+    case 0:
+        return "Sat"
+    case 1:
+        return "Sun"
+    case 2:
+        return "Mon"
+    case 3:
+        return "Tue"
+    case 4:
+        return "Wed"
+    case 5:
+        return "Thu"
+    case 6:
+        return "Fri"
+    default:
+        return "Sat"
+    }
 }
 
 

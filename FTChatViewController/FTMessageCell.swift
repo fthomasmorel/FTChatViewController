@@ -21,9 +21,10 @@ enum FTMessageType{
 let sentColor = UIColor(red: 29/255, green: 121/255, blue: 243/255, alpha: 1)
 let receivedColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 1)
 
-class FTMessageCell : UITableViewCell {
+class FTMessageCell : UITableViewCell, UITextViewDelegate{
     
     @IBOutlet weak var messageView: UITextView!
+    @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var leftConstraint: NSLayoutConstraint!
     @IBOutlet weak var rightConstraint: NSLayoutConstraint!
     @IBOutlet weak var topConstraint: NSLayoutConstraint!
@@ -31,6 +32,7 @@ class FTMessageCell : UITableViewCell {
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     
     var type:FTMessageType?
+    var onSelection:(() -> Void)?
     
     override func layoutSubviews(){
         switch(self.type!){
@@ -53,6 +55,11 @@ class FTMessageCell : UITableViewCell {
     func loadItem(type type:FTMessageType, withMessage message:FTMessage) {
         self.type = type
         self.messageView.text = message.content
+        self.messageView.delegate = self
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "dd/MM hh:mm"
+        self.detailsLabel.text = "\(dayForIndex(message.date.getDay())). \(dateFormatter.stringFromDate(message.date))"
+        self.detailsLabel.textAlignment = (message.source == .Local ? .Right : .Left)
     }
     
     
@@ -91,6 +98,13 @@ class FTMessageCell : UITableViewCell {
         self.heightConstraint.constant = size.height
         self.widthConstraint.constant = size.width
         self.messageView.updateConstraints()
-        
     }
+    
+    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+        if let _ = onSelection {
+            self.onSelection!()
+        }
+        return false
+    }
+    
 }

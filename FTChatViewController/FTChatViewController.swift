@@ -13,6 +13,7 @@ class FTChatViewController: UITableViewController{
     
     var types:[FTMessageType] = []
     var messages:[FTMessage] = []
+    var selectedPath:NSIndexPath?
     
     func commonInit(){
 
@@ -64,7 +65,7 @@ class FTChatViewController: UITableViewController{
         }
     }
     
-    func typeOfMessage(message:FTMessage, withFormerMessage formerMessageOpt:FTMessage?) -> FTMessageType{
+    private func typeOfMessage(message:FTMessage, withFormerMessage formerMessageOpt:FTMessage?) -> FTMessageType{
         guard let formerMessage = formerMessageOpt else{
             return (message.source == .Local ? .FirstSent : .FirstReceived)
         }
@@ -83,7 +84,7 @@ class FTChatViewController: UITableViewController{
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return heightForMessage(messages[indexPath.row], andType: types[indexPath.row])
+        return heightForMessage(messages[indexPath.row], andType: types[indexPath.row]) + (self.selectedPath == indexPath ? 20 : 0)
         
     }
     
@@ -95,6 +96,25 @@ class FTChatViewController: UITableViewController{
             cell = FTMessageCell()
         }
         cell.loadItem(type: types[indexPath.row], withMessage:messages[indexPath.row])
+        cell.selectionStyle = .None;
+        cell.onSelection = {
+            self.selectCellAtPath(indexPath)
+        }
         return cell
+    }
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.selectCellAtPath(indexPath)
+    }
+    
+    func selectCellAtPath(indexPath:NSIndexPath){
+        if(selectedPath == indexPath){
+            self.selectedPath = nil
+            self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+        }else{
+            self.selectedPath = indexPath
+            self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+        }
     }
 }

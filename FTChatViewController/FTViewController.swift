@@ -33,7 +33,7 @@ class FTViewController: UIViewController{
             var source:FTMessageSource
             switch(i % 4){
             case 0:
-                content = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna"
+                content = "Lorem ipsum dolor sit er elit, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna"
                 source = .Remote
                 break;
             case 1:
