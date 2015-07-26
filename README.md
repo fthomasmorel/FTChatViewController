@@ -41,8 +41,8 @@ The ```FTMessageSource``` source field allow you to indicate whether the message
 Adding messages is very simple. You juste have to use :
 
 ```swift
-func addMessage(message:FTMessage) -> Void
-func addMessages(messages:[FTMessage]) -> Void
+func addMessage(message: FTMessage)
+func addMessages(messages: [FTMessage])
 ```
 
 The messages will automaticaly be sorted by date. Then, following messages will be group in the thread discussion with a lesser space between them.
