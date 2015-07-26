@@ -62,7 +62,10 @@ class FTChatViewController: UITableViewController{
         self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
     }
     
-    func addMessages(messages:[FTMessage]){
+    func addMessages(var messages:[FTMessage]){
+        messages.sortInPlace { (prec, next) -> Bool in
+            prec.date.isLessThanDate(next.date)
+        }
         for i in 1 ... messages.count-1{
             self.messages.append(messages[i])
             self.types.append(self.typeOfMessage(messages[i], withFormerMessage:messages[i-1]))
