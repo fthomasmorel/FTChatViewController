@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F55AB7B91B64D7740064C18C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7B81B64D7740064C18C /* AppDelegate.swift */; };
+		F55AB7BB1B64D7740064C18C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7BA1B64D7740064C18C /* ViewController.swift */; };
+		F55AB7BE1B64D7740064C18C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55AB7BC1B64D7740064C18C /* Main.storyboard */; };
+		F55AB7C01B64D7740064C18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55AB7BF1B64D7740064C18C /* Assets.xcassets */; };
+		F55AB7C31B64D7740064C18C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55AB7C11B64D7740064C18C /* LaunchScreen.storyboard */; };
+		F55AB7CE1B64D7740064C18C /* FTChatViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7CD1B64D7740064C18C /* FTChatViewControllerTests.swift */; };
+		F55AB7D91B64D7740064C18C /* FTChatViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7D81B64D7740064C18C /* FTChatViewControllerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F55AB7CA1B64D7740064C18C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F55AB7AD1B64D7740064C18C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F55AB7B41B64D7740064C18C;
+			remoteInfo = FTChatViewController;
+		};
+		F55AB7D51B64D7740064C18C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F55AB7AD1B64D7740064C18C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F55AB7B41B64D7740064C18C;
+			remoteInfo = FTChatViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F55AB7B51B64D7740064C18C /* FTChatViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTChatViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55AB7B81B64D7740064C18C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F55AB7BA1B64D7740064C18C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F55AB7BD1B64D7740064C18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F55AB7BF1B64D7740064C18C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F55AB7C21B64D7740064C18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F55AB7C41B64D7740064C18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F55AB7C91B64D7740064C18C /* FTChatViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTChatViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55AB7CD1B64D7740064C18C /* FTChatViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTChatViewControllerTests.swift; sourceTree = "<group>"; };
+		F55AB7CF1B64D7740064C18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F55AB7D41B64D7740064C18C /* FTChatViewControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTChatViewControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F55AB7D81B64D7740064C18C /* FTChatViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTChatViewControllerUITests.swift; sourceTree = "<group>"; };
+		F55AB7DA1B64D7740064C18C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F55AB7B21B64D7740064C18C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55AB7C61B64D7740064C18C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55AB7D11B64D7740064C18C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F55AB7AC1B64D7740064C18C = {
+			isa = PBXGroup;
+			children = (
+				F55AB7B71B64D7740064C18C /* FTChatViewController */,
+				F55AB7CC1B64D7740064C18C /* FTChatViewControllerTests */,
+				F55AB7D71B64D7740064C18C /* FTChatViewControllerUITests */,
+				F55AB7B61B64D7740064C18C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F55AB7B61B64D7740064C18C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F55AB7B51B64D7740064C18C /* FTChatViewController.app */,
+				F55AB7C91B64D7740064C18C /* FTChatViewControllerTests.xctest */,
+				F55AB7D41B64D7740064C18C /* FTChatViewControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F55AB7B71B64D7740064C18C /* FTChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F55AB7B81B64D7740064C18C /* AppDelegate.swift */,
+				F55AB7BA1B64D7740064C18C /* ViewController.swift */,
+				F55AB7BC1B64D7740064C18C /* Main.storyboard */,
+				F55AB7BF1B64D7740064C18C /* Assets.xcassets */,
+				F55AB7C11B64D7740064C18C /* LaunchScreen.storyboard */,
+				F55AB7C41B64D7740064C18C /* Info.plist */,
+			);
+			path = FTChatViewController;
+			sourceTree = "<group>";
+		};
+		F55AB7CC1B64D7740064C18C /* FTChatViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F55AB7CD1B64D7740064C18C /* FTChatViewControllerTests.swift */,
+				F55AB7CF1B64D7740064C18C /* Info.plist */,
+			);
+			path = FTChatViewControllerTests;
+			sourceTree = "<group>";
+		};
+		F55AB7D71B64D7740064C18C /* FTChatViewControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F55AB7D81B64D7740064C18C /* FTChatViewControllerUITests.swift */,
+				F55AB7DA1B64D7740064C18C /* Info.plist */,
+			);
+			path = FTChatViewControllerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F55AB7B41B64D7740064C18C /* FTChatViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F55AB7DD1B64D7740064C18C /* Build configuration list for PBXNativeTarget "FTChatViewController" */;
+			buildPhases = (
+				F55AB7B11B64D7740064C18C /* Sources */,
+				F55AB7B21B64D7740064C18C /* Frameworks */,
+				F55AB7B31B64D7740064C18C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTChatViewController;
+			productName = FTChatViewController;
+			productReference = F55AB7B51B64D7740064C18C /* FTChatViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F55AB7C81B64D7740064C18C /* FTChatViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F55AB7E01B64D7740064C18C /* Build configuration list for PBXNativeTarget "FTChatViewControllerTests" */;
+			buildPhases = (
+				F55AB7C51B64D7740064C18C /* Sources */,
+				F55AB7C61B64D7740064C18C /* Frameworks */,
+				F55AB7C71B64D7740064C18C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F55AB7CB1B64D7740064C18C /* PBXTargetDependency */,
+			);
+			name = FTChatViewControllerTests;
+			productName = FTChatViewControllerTests;
+			productReference = F55AB7C91B64D7740064C18C /* FTChatViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F55AB7D31B64D7740064C18C /* FTChatViewControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F55AB7E31B64D7740064C18C /* Build configuration list for PBXNativeTarget "FTChatViewControllerUITests" */;
+			buildPhases = (
+				F55AB7D01B64D7740064C18C /* Sources */,
+				F55AB7D11B64D7740064C18C /* Frameworks */,
+				F55AB7D21B64D7740064C18C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F55AB7D61B64D7740064C18C /* PBXTargetDependency */,
+			);
+			name = FTChatViewControllerUITests;
+			productName = FTChatViewControllerUITests;
+			productReference = F55AB7D41B64D7740064C18C /* FTChatViewControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F55AB7AD1B64D7740064C18C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Florent THOMAS-MOREL";
+				TargetAttributes = {
+					F55AB7B41B64D7740064C18C = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					F55AB7C81B64D7740064C18C = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = F55AB7B41B64D7740064C18C;
+					};
+					F55AB7D31B64D7740064C18C = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = F55AB7B41B64D7740064C18C;
+					};
+				};
+			};
+			buildConfigurationList = F55AB7B01B64D7740064C18C /* Build configuration list for PBXProject "FTChatViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F55AB7AC1B64D7740064C18C;
+			productRefGroup = F55AB7B61B64D7740064C18C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F55AB7B41B64D7740064C18C /* FTChatViewController */,
+				F55AB7C81B64D7740064C18C /* FTChatViewControllerTests */,
+				F55AB7D31B64D7740064C18C /* FTChatViewControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F55AB7B31B64D7740064C18C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55AB7C31B64D7740064C18C /* LaunchScreen.storyboard in Resources */,
+				F55AB7C01B64D7740064C18C /* Assets.xcassets in Resources */,
+				F55AB7BE1B64D7740064C18C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55AB7C71B64D7740064C18C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55AB7D21B64D7740064C18C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F55AB7B11B64D7740064C18C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55AB7BB1B64D7740064C18C /* ViewController.swift in Sources */,
+				F55AB7B91B64D7740064C18C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55AB7C51B64D7740064C18C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55AB7CE1B64D7740064C18C /* FTChatViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F55AB7D01B64D7740064C18C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F55AB7D91B64D7740064C18C /* FTChatViewControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F55AB7CB1B64D7740064C18C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F55AB7B41B64D7740064C18C /* FTChatViewController */;
+			targetProxy = F55AB7CA1B64D7740064C18C /* PBXContainerItemProxy */;
+		};
+		F55AB7D61B64D7740064C18C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F55AB7B41B64D7740064C18C /* FTChatViewController */;
+			targetProxy = F55AB7D51B64D7740064C18C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F55AB7BC1B64D7740064C18C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F55AB7BD1B64D7740064C18C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F55AB7C11B64D7740064C18C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F55AB7C21B64D7740064C18C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F55AB7DB1B64D7740064C18C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F55AB7DC1B64D7740064C18C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F55AB7DE1B64D7740064C18C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FTChatViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thomasmorel.florent.FTChatViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F55AB7DF1B64D7740064C18C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FTChatViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thomasmorel.florent.FTChatViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F55AB7E11B64D7740064C18C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FTChatViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thomasmorel.florent.FTChatViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FTChatViewController.app/FTChatViewController";
+			};
+			name = Debug;
+		};
+		F55AB7E21B64D7740064C18C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FTChatViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thomasmorel.florent.FTChatViewControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FTChatViewController.app/FTChatViewController";
+			};
+			name = Release;
+		};
+		F55AB7E41B64D7740064C18C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FTChatViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thomasmorel.florent.FTChatViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FTChatViewController;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		F55AB7E51B64D7740064C18C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FTChatViewControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thomasmorel.florent.FTChatViewControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FTChatViewController;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F55AB7B01B64D7740064C18C /* Build configuration list for PBXProject "FTChatViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55AB7DB1B64D7740064C18C /* Debug */,
+				F55AB7DC1B64D7740064C18C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F55AB7DD1B64D7740064C18C /* Build configuration list for PBXNativeTarget "FTChatViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55AB7DE1B64D7740064C18C /* Debug */,
+				F55AB7DF1B64D7740064C18C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F55AB7E01B64D7740064C18C /* Build configuration list for PBXNativeTarget "FTChatViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55AB7E11B64D7740064C18C /* Debug */,
+				F55AB7E21B64D7740064C18C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F55AB7E31B64D7740064C18C /* Build configuration list for PBXNativeTarget "FTChatViewControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F55AB7E41B64D7740064C18C /* Debug */,
+				F55AB7E51B64D7740064C18C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F55AB7AD1B64D7740064C18C /* Project object */;
+}
