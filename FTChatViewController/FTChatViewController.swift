@@ -12,7 +12,7 @@ import Foundation
 class FTChatViewController: UITableViewController{
     
     var types:[FTMessageType] = []
-    var contents:[String] = []
+    var messages:[FTMessage] = []
     
     func commonInit(){
 
@@ -41,63 +41,49 @@ class FTChatViewController: UITableViewController{
     override func viewDidLoad() {
         let nib = UINib(nibName: "FTMessageCell", bundle: nil)
         tableView.registerNib(nib, forCellReuseIdentifier: kMessageCell)
-        
-        
-        //initTab
-        for i in 0 ... 50{
-            var type:FTMessageType!
-            var content:String!
-            switch(i % 4){
-            case 0:
-                type = .FirstReceived
-                content = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna"
-                break;
-            case 1:
-                type = .NextReceived
-                content = "Hello"
-                break;
-            case 2:
-                type = .FirstSent
-                content = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna"
-                break;
-            default:
-                type = .NextSent
-                content = "ok"
-                break;
-            }
-            contents.append(content)
-            types.append(type)
-        }
     }
     
     override func viewDidAppear(animated: Bool) {
-        let indexPath = NSIndexPath(forRow: contents.count-1, inSection: 0)
+        let indexPath = NSIndexPath(forRow: messages.count-1, inSection: 0)
         self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
     }
     
     
-    
-    
-    func addMessage(content content:String, type:FTMessageType){
-        contents.append(content)
-        types.append(type)
+    func addMessage(message:FTMessage){
+        types.append(self.typeOfMessage(message, withFormerMessage: self.messages.last))
+        messages.append(message)
         self.tableView.reloadData()
-        let indexPath = NSIndexPath(forRow: contents.count-1, inSection: 0)
+        let indexPath = NSIndexPath(forRow: messages.count-1, inSection: 0)
         self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
     }
     
+    func addMessages(messages:[FTMessage]){
+        for i in 1 ... messages.count-1{
+            self.messages.append(messages[i])
+            self.types.append(self.typeOfMessage(messages[i], withFormerMessage:messages[i-1]))
+        }
+    }
     
-    
-    
-    
-    
+    func typeOfMessage(message:FTMessage, withFormerMessage formerMessageOpt:FTMessage?) -> FTMessageType{
+        guard let formerMessage = formerMessageOpt else{
+            return (message.source == .Local ? .FirstSent : .FirstReceived)
+        }
+        
+        var type:FTMessageType = (message.source == .Local ? .FirstSent : .FirstReceived)
+        if message.source == formerMessage.source {
+            if message.date.isLessThanDate(formerMessage.date.dateByAddingTimeInterval(NSTimeInterval(kMessageInterval))) {
+                type = (message.source == .Local ? .NextSent : .NextReceived)
+            }
+        }
+        return type
+    }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-            return contents.count
+            return messages.count
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return heightForContent(contents[indexPath.row], andType: types[indexPath.row])
+        return heightForMessage(messages[indexPath.row], andType: types[indexPath.row])
         
     }
     
@@ -108,7 +94,7 @@ class FTChatViewController: UITableViewController{
         }else{
             cell = FTMessageCell()
         }
-        cell.loadItem(type: types[indexPath.row], withContent:contents[indexPath.row])
+        cell.loadItem(type: types[indexPath.row], withMessage:messages[indexPath.row])
         return cell
     }
 }

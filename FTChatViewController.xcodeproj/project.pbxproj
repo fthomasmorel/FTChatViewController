@@ -18,6 +18,7 @@
 		F55AB7EF1B64E5AE0064C18C /* FTMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F55AB7EE1B64E5AE0064C18C /* FTMessageCell.xib */; };
 		F55AB7F11B650C260064C18C /* FTHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7F01B650C260064C18C /* FTHelpers.swift */; };
 		F55AB7F31B650E030064C18C /* FTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7F21B650E030064C18C /* FTViewController.swift */; };
+		F55AB7F51B6522740064C18C /* FTMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7F41B6522740064C18C /* FTMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		F55AB7EE1B64E5AE0064C18C /* FTMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTMessageCell.xib; sourceTree = "<group>"; };
 		F55AB7F01B650C260064C18C /* FTHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTHelpers.swift; sourceTree = "<group>"; };
 		F55AB7F21B650E030064C18C /* FTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTViewController.swift; sourceTree = "<group>"; };
+		F55AB7F41B6522740064C18C /* FTMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				F55AB7EC1B64E4730064C18C /* FTMessageCell.swift */,
 				F55AB7EE1B64E5AE0064C18C /* FTMessageCell.xib */,
 				F55AB7F01B650C260064C18C /* FTHelpers.swift */,
+				F55AB7F41B6522740064C18C /* FTMessage.swift */,
 			);
 			path = FTChatViewController;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				F55AB7B91B64D7740064C18C /* AppDelegate.swift in Sources */,
 				F55AB7F31B650E030064C18C /* FTViewController.swift in Sources */,
 				F55AB7F11B650C260064C18C /* FTHelpers.swift in Sources */,
+				F55AB7F51B6522740064C18C /* FTMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

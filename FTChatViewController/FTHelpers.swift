@@ -17,6 +17,9 @@ let kMarginTopNext:CGFloat = 2
 let kMaxWidth:CGFloat = 240
 let kCorderRadius:CGFloat = 10
 
+let kFontSize = 15
+let kMessageInterval = 60
+
 
 extension UITextView {
     func sizeForMaxWidth(maxWidth:CGFloat) -> CGSize{
@@ -28,17 +31,43 @@ extension UITextView {
 }
 
 
-func heightForContent(content:String, andType type:FTMessageType) -> CGFloat{
+//From stackoverflow : http://stackoverflow.com/questions/26198526/nsdate-comparison-using-swift
+extension NSDate
+{
+    func isGreaterThanDate(dateToCompare : NSDate) -> Bool{
+        return self.compare(dateToCompare) == NSComparisonResult.OrderedDescending
+    }
+    
+    func isLessThanDate(dateToCompare : NSDate) -> Bool{
+        return self.compare(dateToCompare) == NSComparisonResult.OrderedAscending
+    }
+ 
+    func addDays(daysToAdd : Int) -> NSDate{
+        let secondsInDays : NSTimeInterval = Double(daysToAdd) * 60 * 60 * 24
+        let dateWithDaysAdded : NSDate = self.dateByAddingTimeInterval(secondsInDays)
+        return dateWithDaysAdded
+    }
+    
+    
+    func addHours(hoursToAdd : Int) -> NSDate{
+        let secondsInHours : NSTimeInterval = Double(hoursToAdd) * 60 * 60
+        let dateWithHoursAdded : NSDate = self.dateByAddingTimeInterval(secondsInHours)
+        return dateWithHoursAdded
+    }
+}
+
+
+func heightForMessage(message:FTMessage, andType type:FTMessageType) -> CGFloat{
     let textView = UITextView()
-    textView.text = content
-    textView.sizeToFit()
+    textView.text = message.content
+    textView.font = UIFont(name: "Helvetica", size: CGFloat(kFontSize))
     var height = textView.sizeForMaxWidth(kMaxWidth).height
     switch(type){
     case .FirstReceived, .FirstSent:
-        height += kMarginTopFirst*3
+        height += kMarginTopFirst
         break;
     case .NextReceived, .NextSent:
-        height += kMarginTopNext*3
+        height += kMarginTopNext
         break;
     }
     return height

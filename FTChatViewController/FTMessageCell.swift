@@ -50,9 +50,9 @@ class FTMessageCell : UITableViewCell {
         self.setMessageViewHeightForTextField(self.messageView)
     }
     
-    func loadItem(type type:FTMessageType, withContent content:String) {
+    func loadItem(type type:FTMessageType, withMessage message:FTMessage) {
         self.type = type
-        self.messageView.text = content
+        self.messageView.text = message.content
     }
     
     

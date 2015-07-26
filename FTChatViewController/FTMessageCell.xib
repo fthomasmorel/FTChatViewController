@@ -14,10 +14,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Text here" translatesAutoresizingMaskIntoConstraints="NO" id="6Cw-Yk-3Sq">
-                        <rect key="frame" x="10" y="15" width="240" height="193"/>
+                        <rect key="frame" x="10" y="0.0" width="240" height="208"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="193" id="XTq-Iq-OtD"/>
+                            <constraint firstAttribute="height" constant="208" id="XTq-Iq-OtD"/>
                             <constraint firstAttribute="width" constant="240" id="aVt-iU-agd"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -26,7 +27,7 @@
                     </textView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="6Cw-Yk-3Sq" firstAttribute="top" secondItem="DE9-Ql-wdA" secondAttribute="top" constant="15" id="a4J-ig-Hh7"/>
+                    <constraint firstItem="6Cw-Yk-3Sq" firstAttribute="top" secondItem="DE9-Ql-wdA" secondAttribute="top" id="a4J-ig-Hh7"/>
                     <constraint firstItem="6Cw-Yk-3Sq" firstAttribute="leading" secondItem="DE9-Ql-wdA" secondAttribute="leading" constant="10" id="cGx-nj-JsZ"/>
                     <constraint firstAttribute="trailing" secondItem="6Cw-Yk-3Sq" secondAttribute="trailing" constant="70" id="cy4-4S-v4G"/>
                 </constraints>
