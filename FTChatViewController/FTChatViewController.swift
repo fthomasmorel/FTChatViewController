@@ -112,7 +112,7 @@ class FTChatViewController: UITableViewController{
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.selectCellAtPath(indexPath)
+//        self.selectCellAtPath(indexPath)
     }
     
     func selectCellAtPath(indexPath:NSIndexPath){
