@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8152.3" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8124.4"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,22 +22,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Text here" translatesAutoresizingMaskIntoConstraints="NO" id="6Cw-Yk-3Sq">
-                        <rect key="frame" x="10" y="0.0" width="240" height="208"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cmG-YR-1xb">
+                        <rect key="frame" x="10" y="0.0" width="240" height="200"/>
+                        <subviews>
+                            <textView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Text here" translatesAutoresizingMaskIntoConstraints="NO" id="6Cw-Yk-3Sq">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="-1" id="VjZ-rA-2NX"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="208" id="XTq-Iq-OtD"/>
-                            <constraint firstAttribute="width" constant="240" id="aVt-iU-agd"/>
+                            <constraint firstItem="6Cw-Yk-3Sq" firstAttribute="top" secondItem="cmG-YR-1xb" secondAttribute="top" id="5dK-Zo-T82"/>
+                            <constraint firstAttribute="trailing" secondItem="6Cw-Yk-3Sq" secondAttribute="trailing" id="J4j-h9-dwO"/>
+                            <constraint firstItem="6Cw-Yk-3Sq" firstAttribute="leading" secondItem="cmG-YR-1xb" secondAttribute="leading" id="QWo-cI-NA5"/>
+                            <constraint firstAttribute="height" constant="200" id="bAE-CE-HFQ"/>
+                            <constraint firstAttribute="bottom" secondItem="6Cw-Yk-3Sq" secondAttribute="bottom" id="lvU-Pa-oU0"/>
+                            <constraint firstAttribute="width" constant="240" id="yJg-S7-v42"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        <connections>
-                            <outlet property="delegate" destination="-1" id="VjZ-rA-2NX"/>
-                        </connections>
-                    </textView>
+                    </view>
                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LUN. 10/07 10:15" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Nb-Rg-Yhk">
-                        <rect key="frame" x="15" y="208" width="290" height="29"/>
+                        <rect key="frame" x="15" y="200" width="290" height="29"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="29" id="kA8-Wk-WJM"/>
                         </constraints>
@@ -46,27 +58,28 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="cmG-YR-1xb" firstAttribute="leading" secondItem="DE9-Ql-wdA" secondAttribute="leading" constant="10" id="25o-lg-H80"/>
+                    <constraint firstAttribute="trailing" secondItem="cmG-YR-1xb" secondAttribute="trailing" constant="62" id="8Ul-y4-PtF"/>
+                    <constraint firstItem="cmG-YR-1xb" firstAttribute="top" secondItem="DE9-Ql-wdA" secondAttribute="top" id="EHy-Nx-Dwm"/>
                     <constraint firstItem="2Nb-Rg-Yhk" firstAttribute="leading" secondItem="DE9-Ql-wdA" secondAttribute="leading" constant="15" id="OrP-XP-d6c"/>
                     <constraint firstAttribute="trailing" secondItem="2Nb-Rg-Yhk" secondAttribute="trailing" constant="15" id="RfB-w3-0NO"/>
-                    <constraint firstItem="6Cw-Yk-3Sq" firstAttribute="top" secondItem="DE9-Ql-wdA" secondAttribute="top" id="a4J-ig-Hh7"/>
-                    <constraint firstItem="2Nb-Rg-Yhk" firstAttribute="top" secondItem="6Cw-Yk-3Sq" secondAttribute="bottom" id="bD2-wq-d57"/>
-                    <constraint firstItem="6Cw-Yk-3Sq" firstAttribute="leading" secondItem="DE9-Ql-wdA" secondAttribute="leading" constant="10" id="cGx-nj-JsZ"/>
-                    <constraint firstAttribute="trailing" secondItem="6Cw-Yk-3Sq" secondAttribute="trailing" constant="70" id="cy4-4S-v4G"/>
+                    <constraint firstItem="2Nb-Rg-Yhk" firstAttribute="top" secondItem="cmG-YR-1xb" secondAttribute="bottom" id="TeF-Oq-57Q"/>
                 </constraints>
                 <variation key="default">
                     <mask key="constraints">
-                        <exclude reference="cy4-4S-v4G"/>
+                        <exclude reference="8Ul-y4-PtF"/>
                     </mask>
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="containerView" destination="cmG-YR-1xb" id="UKT-yB-cnh"/>
                 <outlet property="detailsLabel" destination="2Nb-Rg-Yhk" id="K0G-jL-uxG"/>
-                <outlet property="heightConstraint" destination="XTq-Iq-OtD" id="Tda-iV-Dj8"/>
-                <outlet property="leftConstraint" destination="cGx-nj-JsZ" id="Ro7-gT-RbF"/>
+                <outlet property="heightConstraint" destination="bAE-CE-HFQ" id="QSB-oT-Atx"/>
+                <outlet property="leftConstraint" destination="25o-lg-H80" id="xjn-VV-c1Y"/>
                 <outlet property="messageView" destination="6Cw-Yk-3Sq" id="1ng-n2-bIj"/>
-                <outlet property="rightConstraint" destination="cy4-4S-v4G" id="03i-Oe-8Rt"/>
-                <outlet property="topConstraint" destination="a4J-ig-Hh7" id="P36-SU-DhB"/>
-                <outlet property="widthConstraint" destination="aVt-iU-agd" id="SzP-KZ-Ca8"/>
+                <outlet property="rightConstraint" destination="8Ul-y4-PtF" id="qng-tP-l9J"/>
+                <outlet property="topConstraint" destination="EHy-Nx-Dwm" id="gcV-p6-cdv"/>
+                <outlet property="widthConstraint" destination="yJg-S7-v42" id="pkg-WN-GGO"/>
             </connections>
             <point key="canvasLocation" x="297" y="231.5"/>
         </tableViewCell>

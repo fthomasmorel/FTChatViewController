@@ -23,6 +23,7 @@ let receivedColor = UIColor(red: 240/255, green: 240/255, blue: 240/255, alpha: 
 
 class FTMessageCell : UITableViewCell, UITextViewDelegate{
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var messageView: UITextView!
     @IBOutlet weak var detailsLabel: UILabel!
     @IBOutlet weak var leftConstraint: NSLayoutConstraint!
@@ -35,6 +36,11 @@ class FTMessageCell : UITableViewCell, UITextViewDelegate{
     var onSelection:(() -> Void)?
     
     override func layoutSubviews(){
+        let tap = UITapGestureRecognizer(target: self, action: "test:")
+        tap.numberOfTouchesRequired = 1
+        tap.numberOfTapsRequired = 1
+        containerView.addGestureRecognizer(tap)
+        
         switch(self.type!){
         case .FirstReceived:
             self.setCellAsFirstReceived()
@@ -100,11 +106,9 @@ class FTMessageCell : UITableViewCell, UITextViewDelegate{
         self.messageView.updateConstraints()
     }
     
-    func textViewShouldBeginEditing(textView: UITextView) -> Bool {
+    @IBAction func test(sender: AnyObject) {
         if let _ = onSelection {
             self.onSelection!()
         }
-        return false
     }
-    
 }
