@@ -14,12 +14,13 @@ import Foundation
 class FTViewController: UIViewController{
     @IBOutlet weak var container: UIView!
     var chatVC:FTChatViewController!
+    @IBOutlet weak var messageTextField: UITextField!
     
     override func viewDidLoad() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let tmp = storyboard.instantiateViewControllerWithIdentifier("ChatViewController") as? FTChatViewController {
             self.chatVC = tmp
-            self.chatVC.view.frame = CGRectMake(0, 0, chatVC.view.frame.width, chatVC.view.frame.height-80)
+            self.chatVC.view.frame = CGRectMake(0, 20, chatVC.view.frame.width, chatVC.view.frame.height-70)
             self.view.addSubview(chatVC.view)
             self.addChildViewController(self.chatVC)
         }
@@ -62,7 +63,10 @@ class FTViewController: UIViewController{
     }
 
     @IBAction func send(sender: AnyObject) {
-        let date = NSDate().dateByAddingTimeInterval(NSTimeInterval(-8*60))
-        (self.childViewControllers[0] as! FTChatViewController).addMessage(FTMessage(messageWithContent: "Kikou", atDate: date, from: .Local))
+        if let _ = messageTextField.text {
+        let date = NSDate()
+        (self.childViewControllers[0] as! FTChatViewController).addMessage(FTMessage(messageWithContent: messageTextField.text!, atDate: date, from: .Local))
+            messageTextField.text = ""
+        }
     }
 }

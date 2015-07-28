@@ -37,7 +37,6 @@
                                 </connections>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6Cw-Yk-3Sq" firstAttribute="top" secondItem="cmG-YR-1xb" secondAttribute="top" id="5dK-Zo-T82"/>
                             <constraint firstAttribute="trailing" secondItem="6Cw-Yk-3Sq" secondAttribute="trailing" id="J4j-h9-dwO"/>
