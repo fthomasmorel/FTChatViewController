@@ -36,7 +36,7 @@ class FTMessageCell : UITableViewCell, UITextViewDelegate{
     var onSelection:(() -> Void)?
     
     override func layoutSubviews(){
-        let tap = UITapGestureRecognizer(target: self, action: "test:")
+        let tap = UITapGestureRecognizer(target: self, action: "tapOnMessage:")
         tap.numberOfTouchesRequired = 1
         tap.numberOfTapsRequired = 1
         containerView.addGestureRecognizer(tap)
@@ -59,8 +59,9 @@ class FTMessageCell : UITableViewCell, UITextViewDelegate{
     }
     
     func loadItem(type type:FTMessageType, withMessage message:FTMessage) {
-        self.type = type
         self.messageView.text = message.content
+        self.type = type
+        self.messageView.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
         self.messageView.delegate = self
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd/MM hh:mm"
@@ -106,7 +107,7 @@ class FTMessageCell : UITableViewCell, UITextViewDelegate{
         self.messageView.updateConstraints()
     }
     
-    @IBAction func test(sender: AnyObject) {
+    @IBAction func tapOnMessage(sender: AnyObject) {
         if let _ = onSelection {
             self.onSelection!()
         }

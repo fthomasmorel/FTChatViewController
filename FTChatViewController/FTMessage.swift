@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum FTMessageSource{
     case Local
@@ -15,7 +16,8 @@ enum FTMessageSource{
 
 class FTMessage:AnyObject{
  
-    var content:String
+    var content:String?
+    var image:UIImage?
     var date:NSDate
     var source:FTMessageSource
     
@@ -24,5 +26,11 @@ class FTMessage:AnyObject{
         self.date = date
         self.source = source
     }
-    
+
+    init(messageWithImage image:UIImage, atDate date:NSDate, from source:FTMessageSource){
+        self.image = image
+        self.date = date
+        self.source = source
+    }
+
 }

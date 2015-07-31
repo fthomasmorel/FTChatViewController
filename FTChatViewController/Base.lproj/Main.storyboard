@@ -69,7 +69,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="bcL-29-i4o" firstAttribute="top" secondItem="iii-0Y-dH9" secondAttribute="bottom" constant="8" id="2vg-QN-MaP"/>
                             <constraint firstItem="bcL-29-i4o" firstAttribute="top" secondItem="7Iz-uf-3vU" secondAttribute="bottom" constant="8" id="EMe-ds-Zhh"/>
+                            <constraint firstItem="bcL-29-i4o" firstAttribute="top" secondItem="7Iz-uf-3vU" secondAttribute="bottom" constant="8" id="fCV-ti-DgT"/>
                             <constraint firstItem="bcL-29-i4o" firstAttribute="top" secondItem="7Iz-uf-3vU" secondAttribute="bottom" constant="20" id="mse-OE-UJB"/>
                             <constraint firstItem="7Iz-uf-3vU" firstAttribute="leading" secondItem="iii-0Y-dH9" secondAttribute="trailing" constant="8" id="pOW-Er-T2V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7Iz-uf-3vU" secondAttribute="trailing" id="sOi-Vg-A53"/>
@@ -78,6 +80,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="EMe-ds-Zhh"/>
                                 <exclude reference="mse-OE-UJB"/>
                                 <exclude reference="uaz-qa-UVs"/>
                             </mask>

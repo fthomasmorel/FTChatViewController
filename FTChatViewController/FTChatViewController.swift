@@ -40,8 +40,10 @@ class FTChatViewController: UITableViewController{
     }
     
     override func viewDidLoad() {
-        let nib = UINib(nibName: "FTMessageCell", bundle: nil)
-        tableView.registerNib(nib, forCellReuseIdentifier: kMessageCell)
+        let nib1 = UINib(nibName: "FTMessageCell", bundle: nil)
+        tableView.registerNib(nib1, forCellReuseIdentifier: kMessageCell)
+        let nib2 = UINib(nibName: "FTImageCell", bundle: nil)
+        tableView.registerNib(nib2, forCellReuseIdentifier: kImageCell)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -91,37 +93,56 @@ class FTChatViewController: UITableViewController{
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return heightForMessage(messages[indexPath.row], andType: types[indexPath.row]) + (self.selectedPath == indexPath ? 20 : 0)
-        
+        let message = messages[indexPath.row]
+        if let _ = message.content{
+           return heightForMessage(messages[indexPath.row], andType: types[indexPath.row]) + (self.selectedPath == indexPath ? 20 : 0)
+        }else{
+            return 166.0
+        }   
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        var cell:FTMessageCell!
-        if let tmp = tableView.dequeueReusableCellWithIdentifier(kMessageCell) as? FTMessageCell{
-            cell = tmp
+        var cell:UITableViewCell!
+        if let _ = messages[indexPath.row].content{
+            if let tmp = tableView.dequeueReusableCellWithIdentifier(kMessageCell) as? FTMessageCell{
+                tmp.loadItem(type: types[indexPath.row], withMessage:messages[indexPath.row])
+                tmp.onSelection = {
+                    self.selectCellAtPath(indexPath)
+                }
+                cell = tmp
+            }else{
+                cell = FTMessageCell()
+            }
         }else{
-            cell = FTMessageCell()
+            if let tmp = tableView.dequeueReusableCellWithIdentifier(kImageCell) as? FTImageCell{
+                cell = tmp
+                tmp.loadItem(type: types[indexPath.row], withMessage:messages[indexPath.row])
+                tmp.onSelection = {
+                    
+                }
+                cell = tmp
+            }else{
+                cell = FTImageCell()
+            }
         }
-        cell.loadItem(type: types[indexPath.row], withMessage:messages[indexPath.row])
         cell.selectionStyle = .None;
-        cell.onSelection = {
-            self.selectCellAtPath(indexPath)
-        }
         return cell
     }
     
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        self.selectCellAtPath(indexPath)
-    }
     
     func selectCellAtPath(indexPath:NSIndexPath){
         if(selectedPath == indexPath){
             self.selectedPath = nil
             self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+            self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
         }else{
             self.selectedPath = indexPath
             self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .None)
+            if(indexPath.row == messages.count-1){
+                self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Bottom, animated: true)
+            }else{
+                self.tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: .Top, animated: true)
+            }
         }
     }
 }

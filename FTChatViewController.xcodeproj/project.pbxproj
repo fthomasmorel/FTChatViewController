@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F55740341B6B6A0B00DD5322 /* FTImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55740331B6B6A0B00DD5322 /* FTImageCell.swift */; };
+		F55740361B6B6A9D00DD5322 /* FTImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F55740351B6B6A9D00DD5322 /* FTImageCell.xib */; };
 		F55AB7B91B64D7740064C18C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55AB7B81B64D7740064C18C /* AppDelegate.swift */; };
 		F55AB7BE1B64D7740064C18C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55AB7BC1B64D7740064C18C /* Main.storyboard */; };
 		F55AB7C01B64D7740064C18C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F55AB7BF1B64D7740064C18C /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F55740331B6B6A0B00DD5322 /* FTImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTImageCell.swift; sourceTree = "<group>"; };
+		F55740351B6B6A9D00DD5322 /* FTImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTImageCell.xib; sourceTree = "<group>"; };
 		F55AB7B51B64D7740064C18C /* FTChatViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTChatViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55AB7B81B64D7740064C18C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F55AB7BD1B64D7740064C18C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				F55AB7E61B64D7950064C18C /* FTChatViewController.swift */,
 				F55AB7EC1B64E4730064C18C /* FTMessageCell.swift */,
 				F55AB7EE1B64E5AE0064C18C /* FTMessageCell.xib */,
+				F55740331B6B6A0B00DD5322 /* FTImageCell.swift */,
+				F55740351B6B6A9D00DD5322 /* FTImageCell.xib */,
 				F55AB7F01B650C260064C18C /* FTHelpers.swift */,
 				F55AB7F41B6522740064C18C /* FTMessage.swift */,
 			);
@@ -245,6 +251,7 @@
 			files = (
 				F55AB7C31B64D7740064C18C /* LaunchScreen.storyboard in Resources */,
 				F55AB7EF1B64E5AE0064C18C /* FTMessageCell.xib in Resources */,
+				F55740361B6B6A9D00DD5322 /* FTImageCell.xib in Resources */,
 				F55AB7C01B64D7740064C18C /* Assets.xcassets in Resources */,
 				F55AB7BE1B64D7740064C18C /* Main.storyboard in Resources */,
 			);
@@ -277,6 +284,7 @@
 				F55AB7F31B650E030064C18C /* FTViewController.swift in Sources */,
 				F55AB7F11B650C260064C18C /* FTHelpers.swift in Sources */,
 				F55AB7F51B6522740064C18C /* FTMessage.swift in Sources */,
+				F55740341B6B6A0B00DD5322 /* FTImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,7 +30,8 @@ class FTViewController: UIViewController{
         var messages:[FTMessage] = []
         
         for i in 0 ... 50{
-            var content:String!
+            var content:String?
+            var image:UIImage?
             var source:FTMessageSource
             switch(i % 4){
             case 0:
@@ -46,7 +47,7 @@ class FTViewController: UIViewController{
                 source = .Local
                 break;
             default:
-                content = "ok"
+                image = UIImage(named: "img.jpg")
                 source = .Local
                 break;
             }
@@ -54,7 +55,15 @@ class FTViewController: UIViewController{
             if(i > 0){
                 date = messages.last!.date.dateByAddingTimeInterval(NSTimeInterval((i%3 == 0 ? 0 : 5*60)))
             }
-            messages.append(FTMessage(messageWithContent: content, atDate: date, from: source))
+            if let _ = content{
+                let message = FTMessage(messageWithContent: content!, atDate: date, from: source)
+                messages.append(message)
+            }else{
+                let message = FTMessage(messageWithImage: image!, atDate: date, from: source)
+                messages.append(message)
+            }
+            
+
         }
         
         self.chatVC.addMessages(messages)

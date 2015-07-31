@@ -86,6 +86,7 @@ func dayForIndex(index: Int) -> String {
 
 func heightForMessage(message:FTMessage, andType type:FTMessageType) -> CGFloat{
     let textView = UITextView()
+    textView.textContainerInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     textView.text = message.content
     textView.font = UIFont(name: "Helvetica", size: CGFloat(kFontSize))
     var height = textView.sizeForMaxWidth(kMaxWidth).height
