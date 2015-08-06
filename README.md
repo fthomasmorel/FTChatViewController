@@ -1,8 +1,7 @@
 # FTChatViewController
 FTChatViewController is a Custom ViewController designed in Swift (2.0) to implement a message thread in your iOS (8.0+) application. This look as follow :
 
-**TODO ADD AN IMAGE**
-
+![Example](img/example.png)
 
 ## Installation
 ### Podfile
@@ -29,13 +28,23 @@ if let chatViewController = storyboard.instantiateViewControllerWithIdentifier("
 The FTMessage class look like this :
 
 ```swift
-class FTMessage:AnyObject{ 
-    var content:String
+class FTMessage:AnyObject{
+    var content:String?
+    var image:UIImage?
     var date:NSDate
     var source:FTMessageSource
 ```
 
 The ```FTMessageSource``` source field allow you to indicate whether the message comes from the user ```.Local``` or from outside ```.Remote```.
+
+You have two init methods for an FTMessage depends on whether you want a text message or an image message.
+
+```swift
+//text message
+init(messageWithContent content:String, atDate date:NSDate, from source:FTMessageSource)
+//image message
+init(messageWithImage image:UIImage, atDate date:NSDate, from source:FTMessageSource)
+```
 
 ### Add messages to the FTChatViewController of message
 Adding messages is very simple. You juste have to use :
@@ -50,10 +59,3 @@ The messages will automaticaly be sorted by date. Then, following messages will 
 ### Display Details
 
 Just tap the cell to display detail (the date of the message) and tap again to hide this.
-
-***TODO ADD AN IMAGE***
-
-
-
-## TODO
-### Delete messages + delegate
