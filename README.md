@@ -1,4 +1,9 @@
 # FTChatViewController
+
+![swift](https://img.shields.io/badge/swift-2.0-orange.svg)
+![mit](https://img.shields.io/badge/licence-MIT-lightgrey.svg)
+![xcode](https://img.shields.io/badge/xcode-7.0-blue.svg)
+
 FTChatViewController is a Custom ViewController designed in Swift (2.0) to implement a message thread in your iOS (8.0+) application. This look as follow :
 
 ![Example](img/example.png)
